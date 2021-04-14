@@ -11,3 +11,14 @@ def view2(request,email):
 
 def view3(request,name):
     return HttpResponse(f'<h1>Hello Mr./Ms. {name}</h1>')
+
+def if_demo(request):
+    login = True
+    return render(request,'if_demo.html',context={'login':login})
+
+def ifelse_demo(request):
+    login = False
+    return render(request,'ifelse_demo.html',context={'login':login,'name':'Ajayvraikar','a':10,'b':50})
+
+def for_demo(request):
+    return render(request,'for_demo.html',context={'items':['apple','ball','cat'],'profile':{'name':'Ajayvraikar','age':22,'salary':24000}})

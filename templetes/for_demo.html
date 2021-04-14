@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for demo</title>
+</head>
+<body>
+    {% if items %}
+    <h1>Items are :</h1>
+    <ol>
+        {% for item in items%}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <h2>No items </h2>
+    {% endif %}
+    {% for key in profile%}
+        <li>{{key}}</li>
+        {% endfor %} <br>
+    {% for value in profile.values%}
+        <li>{{value}}</li>
+        {% endfor %} <br>
+    {% for key,value in profile.items%}
+        <li>{{key}} : {{value}}</li>
+        {% endfor %}
+</body>
+</html>
